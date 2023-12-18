@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party Planner</title>
-    <script src="index.js"></script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        form {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 20px;
+        }
+
+        form label, form input, form textarea {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+        }
+    </style>
 </head>
 <body>
+    <h1>Party Planner</h1>
     
+    <!-- Party Form -->
+    <form id="party-form">
+        <label for="party-name">Name:</label>
+        <input type="text" id="party-name" required>
+        <label for="party-date">Date:</label>
+        <input type="date" id="party-date" required>
+        <label for="party-time">Time:</label>
+        <input type="time" id="party-time" required>
+        <label for="party-location">Location:</label>
+        <input type="text" id="party-location" required>
+        <label for="party-description">Description:</label>
+        <textarea id="party-description" required></textarea>
+        <button type="submit">Add Party</button>
+    </form>
+
+    <!-- Party List -->
+    <ul id="party-list">
+        <!-- Party items will be dynamically added here -->
+    </ul>
+
+    <script src="index.js"></script>
 </body>
 </html>
